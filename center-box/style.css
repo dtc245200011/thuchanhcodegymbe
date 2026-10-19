@@ -1,0 +1,50 @@
+/* ==========================================
+   1. RESET BỘ KHUNG (General Setup)
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+}
+
+/* ==========================================
+   2. KHUNG CHỨA BẰNG FLEXBOX (3 Dòng CSS cốt lõi)
+   ========================================== */
+.container {
+  min-height: 100vh;           /* Bắt buộc: Đảm bảo container cao toàn màn hình */
+  display: flex;               /* Dòng 1: Kích hoạt mô hình Flexbox */
+  justify-content: center;     /* Dòng 2: Căn giữa theo trục chính (Ngang) */
+  align-items: center;         /* Dòng 3: Căn giữa theo trục phụ (Dọc) */
+  
+  background-color: #f0f2f5;   /* Màu nền nhạt để làm nổi bật thẻ */
+  padding: 20px;               /* Đảm bảo thẻ không dính sát viền khi mở trên điện thoại */
+}
+
+/* ==========================================
+   3. ĐỊNH DẠNG THẺ THÔNG BÁO (.center-card)
+   ========================================== */
+.center-card {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.center-card h3 {
+  color: #1a73e8;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.center-card p {
+  color: #5f6368;
+  line-height: 1.6;
+}
