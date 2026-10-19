@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* 1. AUTHOR AVATAR FIXED SIZE */
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+/* 2. MOSAIC GALLERY (CSS Grid) */
+.mosaic-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 15px;
+    width: 100%;
+}
+
+.photo-box {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo-box:hover img {
+    transform: scale(1.03);
+}
+
+.photo-main {
+    grid-row: span 2;
+}
+
+.photo-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Responsive CSS Grid Breakdown for Mobile */
+@media (max-width: 768px) {
+    .mosaic-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .photo-main {
+        grid-row: span 1;
+        height: 250px;
+    }
+
+    .photo-sub-1, .photo-sub-2 {
+        height: 180px;
+    }
+}
