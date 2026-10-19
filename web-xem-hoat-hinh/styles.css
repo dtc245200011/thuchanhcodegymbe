@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333333;
+    padding-top: 90px; /* Tránh đè lên do header fixed */
+}
+
+/* Header Cố Định */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 40px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logo-red {
+    color: #d9534f;
+}
+
+.logo-yellow {
+    color: #f0ad4e;
+    background-color: #d9534f;
+    padding: 0 4px;
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+/* Nav Head Links */
+.head-link {
+    font-size: 14px;
+    color: #888888;
+    align-self: center;
+}
+
+.head-link a {
+    text-decoration: none;
+    color: #333333;
+    margin: 0 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.head-link a:hover {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Layout Container */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    padding: 0 15px;
+}
+
+/* Left Content - Sidebar */
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+}
+
+.video-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.video-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.thumb-box {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    margin-top: 8px;
+}
+
+.video-info h4 {
+    font-size: 13px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.video-info .views {
+    font-size: 11px;
+    color: #777777;
+}
+
+.video-info .channel {
+    font-size: 12px;
+    color: #555555;
+    font-weight: bold;
+    margin-top: 2px;
+}
+
+/* Right Content - Main Player */
+.right-content {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.video-player {
+    width: 100%;
+    background-color: #000000;
+    margin-bottom: 15px;
+}
+
+.video-details h2 {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.video-details .sub-info {
+    font-size: 12px;
+    color: #777777;
+    font-weight: normal;
+}
+
+.video-details .author {
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 12px;
+}
+
+.video-details .description {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #f1f1f1;
+    border-top: 1px solid #dddddd;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666666;
+}
+
+/* Responsive (RWD) cho thiết bị di động & máy tính bảng */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .main-header {
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .left-content {
+        max-width: 100%;
+    }
+
+    .head-link {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .video-player iframe {
+        height: 250px;
+    }
+}
