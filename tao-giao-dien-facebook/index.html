@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Simplified Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="header">
+        <div class="header-left">
+            <h1 class="logo">facebook</h1>
+            <input type="text" placeholder="Tìm kiếm trên Facebook" class="search-bar">
+        </div>
+        <div class="header-center">
+            <a href="#" class="nav-item active">Trang chủ</a>
+            <a href="#" class="nav-item">Bạn bè</a>
+            <a href="#" class="nav-item">Watch</a>
+            <a href="#" class="nav-item">Marketplace</a>
+        </div>
+        <div class="header-right">
+            <div class="user-profile">
+                <span class="avatar"></span>
+                <span>Người dùng</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Trái -->
+        <aside class="sidebar-left">
+            <ul class="menu-list">
+                <li><span class="icon">👤</span> Trang cá nhân</li>
+                <li><span class="icon">👥</span> Bạn bè</li>
+                <li><span class="icon">👨‍👩‍👧‍👦</span> Nhóm</li>
+                <li><span class="icon">🏪</span> Marketplace</li>
+                <li><span class="icon">📺</span> Watch</li>
+                <li><span class="icon">🕒</span> Kỷ niệm</li>
+                <li><span class="icon">🔖</span> Đã lưu</li>
+            </ul>
+        </aside>
+
+        <!-- Nội dung chính (Feed) -->
+        <main class="content-main">
+            <!-- Khung tạo bài viết -->
+            <div class="card create-post">
+                <div class="post-input-container">
+                    <span class="avatar"></span>
+                    <input type="text" placeholder="Bạn đang nghĩ gì thế?">
+                </div>
+            </div>
+
+            <!-- Bài viết 1 -->
+            <div class="card post">
+                <div class="post-header">
+                    <span class="avatar"></span>
+                    <div>
+                        <h4>Nguyễn Văn A</h4>
+                        <small>2 giờ trước</small>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Hôm nay hoàn thành xong giao diện Facebook giản lược bằng HTML5 và CSS!</p>
+                </div>
+                <div class="post-actions">
+                    <button>Thích</button>
+                    <button>Bình luận</button>
+                    <button>Chia sẻ</button>
+                </div>
+            </div>
+
+            <!-- Bài viết 2 -->
+            <div class="card post">
+                <div class="post-header">
+                    <span class="avatar"></span>
+                    <div>
+                        <h4>CodeGym Vietnam</h4>
+                        <small>5 giờ trước</small>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Thực hành tạo bố cục web giúp bạn làm chủ thuộc tính position, flexbox và CSS layout.</p>
+                </div>
+                <div class="post-actions">
+                    <button>Thích</button>
+                    <button>Bình luận</button>
+                    <button>Chia sẻ</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar Phải -->
+        <aside class="sidebar-right">
+            <h3>Người liên hệ</h3>
+            <ul class="contact-list">
+                <li><span class="status-online"></span> Bạn A</li>
+                <li><span class="status-online"></span> Bạn B</li>
+                <li><span class="status-online"></span> Bạn C</li>
+                <li><span class="status-online"></span> Bạn D</li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>
