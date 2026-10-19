@@ -1,0 +1,73 @@
+/* ==========================================
+   1. RESET VÀ THIẾT LẬP MÔI TRƯỜNG CHUNG
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ==========================================
+   2. KHUNG LƯỚI SẢN PHẨM (.product-grid)
+   ========================================== */
+.product-grid {
+  display: flex;         /* Kích hoạt Flexbox */
+  flex-wrap: wrap;       /* Cho phép các phần tử tự động xuống dòng khi thiếu chỗ */
+  gap: 20px;            /* Khoảng cách đồng đều giữa các thẻ sản phẩm */
+  padding: 20px 0;
+}
+
+/* ==========================================
+   3. ĐỊNH DẠNG THẺ SẢN PHẨM (.product-card)
+   ========================================== */
+.product-card {
+  /* 
+    Cú pháp rút gọn flex: <flex-grow> <flex-shrink> <flex-basis>
+    - flex-grow: 1 (Sẵn sàng giãn ra chiếm hết khoảng trống)
+    - flex-shrink: 1 (Sẵn sàng co lại khi màn hình hẹp)
+    - flex-basis: calc(25% - 20px) (Kích thước cơ sở tối đa là ~25% cho 4 cột)
+  */
+  flex: 1 1 calc(25% - 20px);
+  
+  min-width: 220px;      /* Giới hạn kích thước nhỏ nhất trước khi tự động xuống dòng */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.product-card .price {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #2563eb;        /* Màu xanh dương làm nổi bật giá */
+}
