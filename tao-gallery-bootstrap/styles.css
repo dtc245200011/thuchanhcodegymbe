@@ -1,0 +1,16 @@
+/* Hiệu ứng mượt mà khi rê chuột vào thẻ ảnh */
+.gallery-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.gallery-card img {
+    object-fit: cover;
+    height: 200px;
+}
